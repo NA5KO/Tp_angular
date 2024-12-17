@@ -1,0 +1,151 @@
+<div class="container flex-row">
+    <!-- Carte de visite -->
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <div class="header"></div>
+          <div class="content">
+            <img
+              class="user"
+              [src]="cardData.photo"
+              alt="Photo de profil"
+              *ngIf="cardData.photo"
+            />
+            <h5 class="name">{{ cardData.firstName }} {{ cardData.name }}</h5>
+            <p class="profession">{{ cardData.job }}</p>
+            <p class="motto">{{ cardData.quote }}</p>
+          </div>
+          <div class="footer">Auto Rotation</div>
+        </div>
+        <div class="back">
+          <div class="motto">{{ cardData.quote }}</div>
+          <div class="content">
+            <p class="name">
+              <strong>{{ cardData.description }}</strong>
+            </p>
+            <p class="name">{{ cardData.keywords }}</p>
+          </div>
+          <div class="stats-container">
+            <div class="stats">
+              <h4>235</h4>
+              <p>Followers</p>
+            </div>
+            <div class="stats">
+              <h4>114</h4>
+              <p>Following</p>
+            </div>
+            <div class="stats">
+              <h4>35</h4>
+              <p>Projects</p>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="social-links">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Formulaire -->
+    <div class="formulaire-container">
+      <form>
+        <div class="form-group">
+          <label for="name">Nom :</label>
+          <input
+            id="name"
+            type="text"
+            [(ngModel)]="cardData.name"
+            name="name"
+            class="form-control"
+            placeholder="Insérez votre nom"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="firstName">Prénom :</label>
+          <input
+            id="firstName"
+            type="text"
+            [(ngModel)]="cardData.firstName"
+            name="firstName"
+            class="form-control"
+            placeholder="Insérez votre prénom"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="job">Job :</label>
+          <input
+            id="job"
+            type="text"
+            [(ngModel)]="cardData.job"
+            name="job"
+            class="form-control"
+            placeholder="Insérez votre métier"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="photo">Photo (URL) :</label>
+          <input
+            id="photo"
+            type="text"
+            [(ngModel)]="cardData.photo"
+            name="photo"
+            class="form-control"
+            placeholder="Lien de votre photo"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="quote">Citation favorite :</label>
+          <input
+            id="quote"
+            type="text"
+            [(ngModel)]="cardData.quote"
+            name="quote"
+            class="form-control"
+            placeholder="Insérez une citation favorite"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Décrivez votre travail :</label>
+          <input
+            id="description"
+            type="text"
+            [(ngModel)]="cardData.description"
+            name="description"
+            class="form-control"
+            placeholder="Insérez une description"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="keywords">Mots-clés :</label>
+          <input
+            id="keywords"
+            type="text"
+            [(ngModel)]="cardData.keywords"
+            name="keywords"
+            class="form-control"
+            placeholder="Insérez des mots-clés"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+  

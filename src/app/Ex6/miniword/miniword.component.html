@@ -1,0 +1,47 @@
+<p
+  [ngStyle]="{
+    color: textColor,
+    'font-size.px': fontSize,
+    'font-family': fontFamily
+  }"
+  style="margin-right: 20px"
+>
+  Test
+</p>
+
+<div
+  style="
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+  "
+>
+  <input
+    type="color"
+    [(ngModel)]="textColor"
+    class="color-input"
+    title="Choose text color"
+  />
+
+  <input
+    type="number"
+    [(ngModel)]="fontSize"
+    placeholder="Taille"
+    style="
+      border: 1px solid #ccc;
+      padding: 5px;
+      text-align: center;
+      width: 60px;
+    "
+  />
+
+  <select
+    [(ngModel)]="fontFamily"
+    class="font-select"
+    title="Choose font family"
+  >
+    <option *ngFor="let font of fonts" [value]="font">{{ font }}</option>
+  </select>
+</div>

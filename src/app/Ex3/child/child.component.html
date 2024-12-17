@@ -1,0 +1,11 @@
+<!-- <div [style.background-color]="color"> -->
+    <div>
+        <h3>Composant Enfant</h3>
+        <p>Le fond du composant enfant est la même couleur que celui du parent.</p>
+        <input 
+        type="text" 
+        #colorInput 
+        placeholder="Insérez votre couleur favorite"
+      />
+      <button (click)="change(colorInput.value)">Changer la couleur</button>
+    </div>

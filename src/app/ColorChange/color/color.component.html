@@ -1,0 +1,11 @@
+<p>first works!</p>
+<div [style.background-color] = "currentColor">
+    Color
+</div>
+<input 
+ type ="text"
+ #colorInput 
+ placeholder="Enter une couleur" />
+ <button (click)="applyColor(colorInput.value)">Change Color</button>
+
+
